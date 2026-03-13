@@ -21,24 +21,26 @@
 <body>
 
   <!-- Header Section contains Navigation Bar -->
-  <header>
-    <nav>
-      <h2 class="logo">kanoj art.</h2>
-      <ul class="menu" id="menu_list">
-        <li class="link-items"><a href="index.html">Home</a></li>
-        <li class="link-items"><a href="about.html">About</a></li>
-        <li class="link-items"><a href="gallery.html">Gallery</a></li>
-        <li class="link-items"><a href="shop.html">Shop</a></li>
-        <li class="link-items"><a href="contact.html">Contact</a></li>
-      </ul>
-      <i class="fa-solid fa-bars" id="menuBtn" onclick="showMenu()"></i>
-      <i class="fa-solid fa-xmark" id="closeBtn" onclick="closeMenu()"></i>
-    </nav>
-  </header>
+    <header>
+      <div class="container">
+        <h2 class="logo">kanoj art.</h2>
+        <nav>
+          <ul class="menu" id="menu_list">
+            <li class="link-items"><a href="/index.html">Home</a></li>
+            <li class="link-items"><a href="/about.html">About</a></li>
+            <li class="link-items"><a href="/gallery.html">Gallery</a></li>
+            <li class="link-items"><a href="/shop.html">Shop</a></li>
+            <li class="link-items"><a href="/contact.html">Contact</a></li>
+          </ul>
+          <!-- <i class="fa-solid fa-bars" id="menuBtn" onclick="showMenu()"></i>
+      <i class="fa-solid fa-xmark" id="closeBtn" onclick="closeMenu()"></i> -->
+        </nav>
+      </div>
+    </header>
 
   <!-- Main Section contains bio information -->
   <main>
-    <div class="about-page">
+    <!-- <div class="about-page">
       <div class="grid-tracks bio">
       
         <h1>Meet the Artist</h1>
@@ -56,55 +58,97 @@
         </div>
       </div>
 
-    </div>
-  </main>
-
-  <!-- Footer section  -->
-  <footer>
-    <div class="container">
-
-      <div class="footer-row">
-        <div class="footer-col about">
-          <div class="footer-profile">
-            <img src="./logos/ka-2-removebg.png" alt="ka logo">
-            <h4 id="fp-name">Kanoj Art</h4>
+    </div> -->
+  
+    <section id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I am Kanoj, a skilled professional sketch artist from Mullanpur, Ludhiana, specialising in portraits, landscapes, conceptual art, and custom artwork. I have been Practising since 2019, and I have developed a realistic style that combines precision with creativity. I am strongly attentive to details. I transform simple ideas into striking visuals that capture emotion and depth. Whether it’s a personal commission or a larger artistic project, my work reflects dedication, craftsmanship, and a passion for bringing stories to life on paper.
+            </p>
           </div>
-          <!-- <h5>About</h5> -->
-          <p>Professional sketch artist specializing in realistic portraits and custom artwork. Every piece is hand-drawn with attention to detail and emotional depth. Bringing your memories to life.</p>
-          <div class="footer-btn">
-            <button>Pencil Art</button>
-            <button>Charcoal</button>
-            <button>Pastels</button>
-          </div>
-        </div>
-
-        <div class="footer-col services">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#">Portrait Sketch</a></li>
-            <li><a href="#">Couple Sketch</a></li>
-            <li><a href="#">Pet Sketches</a></li>
-            <li><a href="#">Landscape Art</a></li>
-            <li><a href="#">Custom Artworks</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col media">
-          <h4>Stay Updated</h4>
-          <div class="social-links">
-            <a href="https://www.facebook.com/share/1FLMpk91k3/" id="fb"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/kanoj_art?igsh=MWJvdzBqcjF6NXFyZQ==" id="insta"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://wa.me/918360639849" id="whp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://youtube.com/@kanojart9010?si=kCD3GN-nYsrUakPv" id="yt"><i class="fa-brands fa-youtube"></i></a>
+          <div class="about-image">
+            <div class="image-grid">
+              <div class="img-1">
+                <img src="/images/kanoj2.jpeg" alt="">
+              </div>
+              <div class="img-2">
+                <img src="/images/kanoj3.jpeg" alt="">
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
+  </main>
 
-      <hr>
+  <!-- Footer section  -->
+    <footer>
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer-col about">
+            <div class="footer-profile">
+              <img src="./logos/ka-2-removebg.png" alt="ka logo" />
+              <div class="fp-name">
+                <h3>Kanoj</h3>
+                <p>Sketch Artist</p>
+              </div>
+          
+            </div>
+            <p>
+              Professional sketch artist specializing in realistic portraits and
+              custom artwork. Every piece is hand-drawn with attention to detail
+              and emotional depth. Bringing your memories to life.
+            </p>
+            <div class="footer-btn">
+              <a href="#">Graphite</a>
+              <a href="#">Charcoal</a>
+              <a href="#">Pastels</a>
+            </div>
+          </div>
 
-      <div class="copyright">© 2025 Kanoj-art. All rights reserved | Designed by Tushar</div>
-    </div>
-  </footer>
+          <div class="footer-col services">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="#">Portrait Sketch</a></li>
+              <li><a href="#">Couple Sketch</a></li>
+              <li><a href="#">Pet Sketches</a></li>
+              <li><a href="#">Landscape Art</a></li>
+              <li><a href="#">Custom Artworks</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col media">
+            <h3>Stay Updated</h3>
+            <div class="social-links">
+              <a href="https://www.facebook.com/share/1FLMpk91k3/" id="fb"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/kanoj_art?igsh=MWJvdzBqcjF6NXFyZQ=="
+                id="insta"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="https://wa.me/918360639849" id="whp"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+              <a
+                href="https://youtube.com/@kanojart9010?si=kCD3GN-nYsrUakPv"
+                id="yt"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>
+             © 2025 Kanoj-art. All rights reserved | Designed by Tushar
+          </p>
+        </div>
+      </div>
+    </footer>
   <script src="js/navbar.js"></script>
 </body>
 </html>

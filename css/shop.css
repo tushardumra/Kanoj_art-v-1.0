@@ -1,98 +1,195 @@
+:root {
+  /* ========================================
+     COLOR PALETTE - LIGHT THEME
+     ======================================== */
+  --background-color: #b2beb5;
+  --surface-color: #36454f;
+  --box-card-color: #e5e4e2;
+  --text-light-color: #e5e4e2;
+  --text-dark-color: #353935;
+  --text-shadow-color: #b2beb5;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+
+  /* ========================================
+     TYPOGRAPHY
+     ======================================== */
+  --font-family-base:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  --font-size-base: 1rem; /*equals to 16px*/
+
+  /* Base line height for improved readability. It's unitless, meaning it's a multiplier of the font size. */
+  --line-height-base: 1.5;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  /* ========================================
+     SPACING & LAYOUT
+     ======================================== */
+  /* A base unit for consistent spacing (margins, padding). We can use multiples of this unit. */
+  --spacing-unit: 1rem;
+
+  /* Max width for our .container class to ensure content is readable on wide screens. */
+  --container-width: 1140px;
+  --container-side-margin: 120px;
+
+  /* A consistent border-radius for rounded corners on buttons, cards, and inputs. */
+  --border-radius: 0.25rem;
+}
+
+/*
+  ========================================
+  CSS RESET
+  ========================================
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Trebuchet MS', sans-serif;
 }
 
-body, html {
-  width: 100%;
+html,
+body {
   height: 100%;
-  background-color: #B2BEB5;
 }
 
-/* Header (Navigation bar) css */
+#root,
+#__next {
+  isolation: isolate;
+}
 
+/*
+  ========================================
+  BASE STYLES
+  ========================================
+*/
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--text-dark-color);
+  background-color: var(--background-color);
+}
+
+/*
+  ========================================
+  HEADER & NAVIGATION
+  ========================================
+*/
 header {
-  width: 100%;
-  padding: 17px 20px;
-  background-color: #36454F;
+  background-color: var(--surface-color);
+  /* box-shadow: 0 2px 4px var(--shadow-color); */
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.588);
-  margin-bottom: 70px;
+  padding: var(--spacing-unit) 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-nav {
+header .container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 30px;
-}
-nav .logo {
-  font-size: 37px;
-  font-weight: bolder;
-  color: #E5E4E2;
-}
-
-nav .menu {
-  list-style: none;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 30px;
-  /* padding-top: 10px;  */
+  
+  /* We also apply our max-width and centering here. */
+  max-width: var(--container-width);
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 0 var(--spacing-unit); /* Adds padding on the sides for smaller screens */
 }
 
-nav .menu li a {
+header .container h2 {
+  color: var(--text-light-color);
+  font-size: 25px;
+}
+
+header nav ul {
+  display: flex;
+  gap: calc(var(--spacing-unit) * 2);
+  list-style: none;
+}
+
+header nav ul li a {
   text-decoration: none;
-  color: #E5E4E2;
-  font-size: 18px;
-  font-weight: 600;
-  cursor: pointer;
+  color: var(--text-light-color);
+  font-weight: var(--font-weight-bold);
+  padding: 0.5rem;
+  transition: color 0.3s ease-in-out;
 }
 
-.link-items a:hover{
-  color: #E5E4E2;
-  text-shadow: 2px 2px 5px #B2BEB5;
+header nav ul li a:hover {
+  color: var(--text-shadow-color);
 }
 
-#menuBtn, #closeBtn {
-  cursor: pointer;
-  font-size: 23px;
-  display: none;
-  color: #E5E4E2;
+/*
+  ========================================
+  Shop Section
+  ========================================
+*/
+#shop {
+  padding: calc(var(--spacing-unit)*4)0;
 }
 
-@media (max-width: 992px) {
-  /* Responsive Navbar */
-    nav .menu {
-    display: none;
-    }
-
-    #menuBtn {
-      display: block;
-    }
-
-    header {
-      position: relative;
-    }
-    nav .menu {
-      flex-direction: column;
-      position: absolute;
-      top: 77px;
-      left: 0px;
-      background-color: #36454F;
-      width: 50%;
-      padding: 15px 0;
-      box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.588);
-      text-align: center;
-    }
-    nav .menu li {
-      margin: 20px 0px;
-    }
+#shop .container {
+  max-width: var(--container-width);
+  margin: 0 auto;
 }
 
-/* main section contains shop-page css */
-.main {
+#shop .container h2 {
+  text-align: center;
+  font-size: calc(var(--font-size-base)*2);
+  margin-bottom: calc(var(--spacing-unit)*4);
+}
+
+.sketch-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(var(--spacing-unit)*3);
+}
+
+.sketch-card {
+  background: var(--box-card-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  overflow: hidden;
+}
+
+.sketch-card img {
+  /* height: 350px; */
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sketch-info, .sketch-link {
+  padding: calc(var(--spacing-unit));
+}
+
+.sketch-info h3 {
+  margin-bottom: var(--spacing-unit);
+}
+
+.sketch-info p {
+  word-break: break-all;
+}
+
+.sketch-link a {
+  display: block;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--border-radius);
+  background-color: var(--surface-color);
+  color: var(--text-light-color);
+}
+
+/* .main {
   margin-bottom: 100px;
 }
 .main h1 {
@@ -150,81 +247,94 @@ nav .menu li a {
   color: #FFFFF0;
   border: none;
   cursor: pointer;
-}
+} */
 
-/* footer section css */
-
+/*
+  ========================================
+  Footer SECTION
+  ========================================
+*/
 footer {
-  background-color: #36454F;
-  padding: 70px 25px 40px;
+  background-color: var(--surface-color);
 }
 
-.footer-container {
-  max-width: 1170px;
-  margin: auto;
-  
+footer .container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: calc(var(--spacing-unit)*2) 0 0;
 }
 
 .footer-row {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: calc(var(--spacing-unit)*2)
 }
 
 .about {
   width: 50%;
-  padding-right: 50px;
+  padding-right: calc(var(--spacing-unit)*5);
 }
+
 .services {
-  width: 25%;
+  width: 30%;
 }
 .media {
-  width: 25%;
-} 
+  width: 20%;
+}
 
 .footer-profile {
   display: flex;
-  gap: 10px;
+  gap: var(--spacing-unit);
+  margin-bottom: var(--spacing-unit);
 }
-.footer-profile h4 {
-  padding-top: 15px;
+
+.fp-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+.fp-name h3 {
+  font-size: calc(var(--font-size-base)*1.4);
+  color: var(--text-light-color);
+}
+
+.fp-name p {
+  color: #a0a0a0;
+}
+
 .footer-profile img {
   height: 60px;
   width: 60px;
   background-color: #fff;
   border-radius: 50%;
 }
-#fp-name {
-  font-size: 25px;
-  color: #E5E4E2;
-}
-.footer-col p {
+
+.footer-col {
   color: #a0a0a0;
-  font-size: 15px;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  margin-top: 10px;
 }
 
 .footer-btn {
   display: flex;
   gap: 15px;
+  margin-top: var(--spacing-unit);
 }
-.footer-btn button {
-  padding: 5px 8px;
+.footer-btn a {
+  text-decoration: none;
+  padding: 4px 9px;
   border-radius: 25px;
-  font-size: 13px;
+  font-size: 14px;
   background-color: rgba(255, 255, 255, 0.2);
-  color: #FFFFF0;
+  color: #fffff0;
   border: none;
 }
 
-.footer-col h4 {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: #E5E4E2;
-  font-weight: bold;
-} 
+.services h3, .media h3 {
+  /* font-size: calc(var(--font-size-base)*1.4); */
+  color: var(--text-light-color);
+  margin-bottom: var(--spacing-unit);
+}
+
 ul {
   list-style: none;
 }
@@ -236,53 +346,50 @@ ul {
   font-size: 15px;
   text-decoration: none;
   color: #a0a0a0;
-  display: block;
+  /* display: block; */
   transition: all 0.3s ease;
 }
 .footer-col ul li a:hover {
   color: #ffffff;
-  padding-left: 8px;
 }
 
-.footer-col .social-links a{
+.footer-col .social-links a {
   display: inline-block;
-  font-size: 17px;
-  height: 40px;
-  width: 40px;
-  font-size: 19px;
+  height: 35px;
+  width: 35px;
+  font-size: 18px;
   background-color: rgba(255, 255, 255, 0.2);
-  color: #E5E4E2;
+  color: #e5e4e2;
   margin: 0 10px 10px 0;
   text-align: center;
-  line-height: 40px;
+  line-height: 37px;
   border-radius: 50%;
   transition: all 0.5s ease;
 }
 
 .footer-col .social-links #fb:hover {
-  background-color: #1877F2;
-  color: #E5E4E2;
+  background-color: #1877f2;
+  color: #e5e4e2;
 }
 .footer-col .social-links #insta:hover {
-  background-color: #FF0069;
-  color: #E5E4E2;
+  background-color: #ff0069;
+  color: #e5e4e2;
 }
 .footer-col .social-links #whp:hover {
-  background-color: #25D366;
-  color: #E5E4E2;
+  background-color: #25d366;
+  color: #e5e4e2;
 }
 .footer-col .social-links #yt:hover {
-  background-color: #FF0000;
-  color: #E5E4E2;
-}
-
-.footer-container hr {
-  margin: 25px 0 15px;
+  background-color: #ff0000;
+  color: #e5e4e2;
 }
 
 .copyright {
+  border-top: 1px solid var(--text-light-color);
   color: #a0a0a0;
   text-align: center;
+  height: 50px;
+  line-height: 50px;
 }
 
 @media (max-width: 720px) {

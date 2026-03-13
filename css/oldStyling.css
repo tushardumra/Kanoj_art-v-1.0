@@ -1,0 +1,202 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', sans-serif;
+} */
+
+html,
+body {
+  width: 100%;
+  overflow: hidden;
+  background-color: #b2beb5;
+}
+
+/* Header (Navigation bar) Section Css */
+
+header {
+  width: 100%;
+  padding: 17px 20px;
+  background-color: #36454f;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.588);
+  margin-bottom: 60px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 30px;
+}
+nav .logo {
+  font-size: 37px;
+  font-weight: bolder;
+  color: #e5e4e2;
+}
+
+nav .menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  /* padding-top: 10px;  */
+}
+
+nav .menu li a {
+  text-decoration: none;
+  color: #e5e4e2;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.link-items a:hover {
+  color: #e5e4e2;
+  text-shadow: 2px 2px 5px #b2beb5;
+}
+
+#menuBtn,
+#closeBtn {
+  cursor: pointer;
+  font-size: 23px;
+  display: none;
+  color: #e5e4e2;
+}
+
+/* Main Section Css */
+
+.homepage {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 80px 150px 50px;
+  gap: 50px;
+}
+
+.hp-grid .text {
+  border: 2px solid black;
+}
+.text {
+  padding: 20px 0;
+}
+.text h1 {
+  color: #353935;
+  font-size: 50px;
+}
+.text p {
+  color: #353935;
+  font-size: 17px;
+  letter-spacing: 2%;
+  line-height: 1.2;
+  padding: 20px 0 30px;
+}
+
+.marquee-box {
+  height: 530px;
+  width: 700px;
+  border: 8px dashed #353935;
+  text-align: center;
+  padding: 15px;
+}
+.marquee-box h2 {
+  margin-bottom: 8px;
+  color: #353935;
+}
+
+marquee img {
+  height: 440px;
+  width: 350px;
+  margin: 0 5px;
+  border: 12px double #353935;
+}
+marquee video {
+  height: 440px;
+  width: 258px;
+  margin: 0 10px;
+  border: 12px double #353935;
+}
+
+.hp-headings {
+  font-size: 35px;
+  text-align: center;
+  padding-bottom: 60px;
+  color: #353935;
+}
+.features-section {
+  width: 100%;
+  padding: 100px 150px;
+}
+
+footer {
+  background-color: #36454f;
+  padding: 70px 25px 40px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* about section */
+.about-page {
+  height: 715px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto;
+  padding: 80px 150px;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.bio {
+  /* padding: 100px 30px 40px 100px; */
+}
+.grid-tracks h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #353935;
+  
+}
+.grid-tracks p {
+  font-size: 18px;
+  color: #353935;
+  line-height: 1.4;
+  padding-right: 60px;
+  text-align: justify;
+}
+
+.grid-tracks .photo1{
+  position: relative;
+}
+.photo1{
+  background-image: url(../images/kanoj2.jpeg);
+  height: 400px;
+  width: 300px;
+  background-size: contain;
+  position: absolute;
+  top: 50px;
+  /* left: 10px; */
+  border-radius: 50px 0 50px 0;
+  border: 5px solid #353935;
+  box-shadow: 10px 10px 12px #353935,
+              -10px -10px 12px #36454F;
+}
+
+.grid-tracks .photo2{
+  position: relative;
+}
+.photo2 {
+  background-image: url(../images/kanoj3.jpeg);
+  height: 400px;
+  width: 300px;
+  background-size: contain;
+  position: absolute;
+  top: 150px;
+  /* left: 10px; */
+  border-radius: 0 50px 0 50px;
+  border: 5px solid #353935;
+  box-shadow: 12px 12px 15px #353935,
+              -12px -12px 15px #36454F;
+}

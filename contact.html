@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -16,146 +16,189 @@
     />
 
     <!-- google fonts link -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allison&family=Great+Vibes&family=Island+Moments&family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allison&family=Great+Vibes&family=Island+Moments&family=Qwitcher+Grypen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-
     <!-- Header Section contains Navigation Bar -->
-  <header>
-    <nav>
-      <h2 class="logo">kanoj art.</h2>
-      <ul class="menu" id="menu_list">
-        <li class="link-items"><a href="index.html">Home</a></li>
-        <li class="link-items"><a href="about.html">About</a></li>
-        <li class="link-items"><a href="gallery.html">Gallery</a></li>
-        <li class="link-items"><a href="shop.html">Shop</a></li>
-        <li class="link-items"><a href="contact.html">Contact</a></li>
-      </ul>
-      <i class="fa-solid fa-bars" id="menuBtn" onclick="showMenu()"></i>
-      <i class="fa-solid fa-xmark" id="closeBtn" onclick="closeMenu()"></i>
-    </nav>
-  </header>
-
-  <!-- Contact page  -->
-   
-    <div class="contact-heading">
-      <h1>Get in touch!</h1>
-      <p>Have a question or want to discuss a project?</p>
-    </div>
-    <main>
+    <header>
       <div class="container">
-        <div class="contact-info">
-          <h2>Contact info</h2>
-          <p class="contact-medium">
-            <i class="fa-solid fa-phone"></i>
-            <a href="tel:+(91)-8360639849"> +(91)-8360639849</a>
-          </p>
-          <p class="contact-medium">
-            <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:kanojart666@gmail.com">kanojart666@gmail</a>
-          </p>
-          <address class="contact-medium">
-            <i class="fa-solid fa-location-dot"></i>Mullanpur Dakha, Ludhiana,
-            Punjab-141101
-          </address>
-        </div>
-
-        <div class="contact-form">
-          <div class="user-info">
-            <div class="input-boxes name">
-              <label for="name"><p>Full Name</p>
-                <input type="text" name="name" id="name" placeholder="Enter name">
-              </label>
-            </div>
-            <div class="input-boxes email">
-              <label for="name"><p>Email</p>
-                <input type="email" name="email" id="email" placeholder="Enter email">
-              </label>
-            </div>
-            <div class="input-boxes phone">
-              <label for="name"><p>Phone Number</p>
-                <input type="number" name="phone" id="phone" placeholder="Enter phone no.">
-              </label>
-            </div>
-            <div class="input-boxes type">
-              <label for="select-type"><p>Sketch Type</p>
-                <select name="select-type" id="select-type">
-                  <option value="General-inquiry" class="opt-colr">General-inquiry</option>
-                  <option value="A4-size Sketch">A4-size Sketch</option>
-                  <option value="A3-size Sketch">A3-size Sketch</option>
-                  <option value="A4-size-double-face sketch">
-                    A4-size-double-face Sketch
-                  </option>
-                  <option value="A3-size-double-face sketch">
-                    A3-size-double-face Sketch
-                  </option>
-                  <option value="Custom Sketch">Custom Sketch</option>
-                </select>
-              </label>
-            </div>
-            <div class="input-boxes msg">
-              <label for="message"><p>Message</p>
-                <textarea name="message" id="message" placeholder="Any Suggestions..."></textarea>
-              </label>
-            </div>
-            <div class="input-boxes send-btn">
-              <button type="submit">Send Details</button>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </main>
-
-    <!-- footer section -->
-    <footer>
-    <div class="footer-container">
-
-      <div class="footer-row">
-        <div class="footer-col about">
-          <div class="footer-profile">
-            <img src="./logos/ka-2-removebg.png" alt="ka logo">
-            <h4 id="fp-name">Kanoj Art</h4>
-          </div>
-          <!-- <h5>About</h5> -->
-          <p>Professional sketch artist specializing in realistic portraits and custom artwork. Every piece is hand-drawn with attention to detail and emotional depth. Bringing your memories to life.</p>
-          <div class="footer-btn">
-            <button>Pencil Art</button>
-            <button>Charcoal</button>
-            <button>Pastels</button>
-          </div>
-        </div>
-
-        <div class="footer-col services">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#">Portrait Sketch</a></li>
-            <li><a href="#">Couple Sketch</a></li>
-            <li><a href="#">Pet Sketches</a></li>
-            <li><a href="#">Landscape Art</a></li>
-            <li><a href="#">Custom Artworks</a></li>
+        <h2 class="logo">kanoj art.</h2>
+        <nav>
+          <ul class="menu" id="menu_list">
+            <li class="link-items"><a href="index.html">Home</a></li>
+            <li class="link-items"><a href="about.html">About</a></li>
+            <li class="link-items"><a href="gallery.html">Gallery</a></li>
+            <li class="link-items"><a href="shop.html">Shop</a></li>
+            <li class="link-items"><a href="contact.html">Contact</a></li>
           </ul>
-        </div>
+          <!-- <i class="fa-solid fa-bars" id="menuBtn" onclick="showMenu()"></i>
+      <i class="fa-solid fa-xmark" id="closeBtn" onclick="closeMenu()"></i> -->
+        </nav>
+      </div>
+    </header>
 
-        <div class="footer-col media">
-          <h4>Stay Updated</h4>
-          <div class="social-links">
-            <a href="https://www.facebook.com/share/1FLMpk91k3/" id="fb"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/kanoj_art?igsh=MWJvdzBqcjF6NXFyZQ==" id="insta"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://wa.me/918360639849" id="whp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://youtube.com/@kanojart9010?si=kCD3GN-nYsrUakPv" id="yt"><i class="fa-brands fa-youtube"></i></a>
+    <!-- Contact page  -->
+
+    <section id="contact">
+      <div class="container">
+        <h2>Get in touch!</h2>
+        <p>Have a question or want to discuss a project?</p>
+
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Contact info</h3>
+            <p class="contact-medium">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+(91)-8360639849"> +(91)-8360639849</a>
+            </p>
+            <p class="contact-medium">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:kanojart666@gmail.com">kanojart666@gmail</a>
+            </p>
+
+            <address class="contact-medium">
+              <i class="fa-solid fa-location-dot"></i>Mullanpur Dakha, Ludhiana,
+              Punjab-141101
+            </address>
+
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d20764.104747107598!2d74.91024966353336!3d31.621257550000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1773415844102!5m2!1sen!2sin"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
+
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/mreylbpq"
+            method="post"
+          >
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="user_name"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="user_email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <label for="phone">Phone</label>
+            <input
+              type="number"
+              name="user_phone"
+              id="phone"
+              name="phone"
+              placeholder="Your Phone"
+              required
+            />
+            <label for="sketch-type">Sketch Type</label>
+            <select name="sketch-type" id="sketch-type">
+              <option value="General-inquiry">General-inquiry</option>
+              <option value="A4-size Sketch">A4-size Sketch</option>
+              <option value="A3-size Sketch">A3-size Sketch</option>
+              <option value="A4-size-double-face sketch">
+                A4-size-double-face Sketch
+              </option>
+              <option value="A3-size-double-face sketch">
+                A3-size-double-face Sketch
+              </option>
+              <option value="Custom Sketch">Custom Sketch</option>
+            </select>
+            <label for="message">Message</label>
+            <textarea
+              name="user_message"
+              id="message"
+              rows="5"
+              placeholder="Your Message"
+              name="message"
+              required
+            ></textarea>
+            <!-- Container for display success or error messages to users while they submitting form -->
+            <div id="form-status"></div>
+            <button type="submit">Send Message</button>
+          </form>
         </div>
       </div>
+    </section>
 
-      <hr>
+    <!-- Footer section  -->
+    <footer>
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer-col about">
+            <div class="footer-profile">
+              <img src="./logos/ka-2-removebg.png" alt="ka logo" />
+              <div class="fp-name">
+                <h3>Kanoj</h3>
+                <p>Sketch Artist</p>
+              </div>
+            </div>
+            <p>
+              Professional sketch artist specializing in realistic portraits and
+              custom artwork. Every piece is hand-drawn with attention to detail
+              and emotional depth. Bringing your memories to life.
+            </p>
+            <div class="footer-btn">
+              <a href="#">Graphite</a>
+              <a href="#">Charcoal</a>
+              <a href="#">Pastels</a>
+            </div>
+          </div>
 
-      <div class="copyright">© 2025 Kanoj-art. All rights reserved | Designed by Tushar</div>
-    </div>
-  </footer>
-  <script src="js/navbar.js"></script>
+          <div class="footer-col services">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="#">Portrait Sketch</a></li>
+              <li><a href="#">Couple Sketch</a></li>
+              <li><a href="#">Pet Sketches</a></li>
+              <li><a href="#">Landscape Art</a></li>
+              <li><a href="#">Custom Artworks</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col media">
+            <h3>Stay Updated</h3>
+            <div class="social-links">
+              <a href="https://www.facebook.com/share/1FLMpk91k3/" id="fb"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/kanoj_art?igsh=MWJvdzBqcjF6NXFyZQ=="
+                id="insta"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="https://wa.me/918360639849" id="whp"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+              <a
+                href="https://youtube.com/@kanojart9010?si=kCD3GN-nYsrUakPv"
+                id="yt"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>© 2025 Kanoj-art. All rights reserved | Designed by Tushar</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/navbar.js"></script>
   </body>
 </html>
