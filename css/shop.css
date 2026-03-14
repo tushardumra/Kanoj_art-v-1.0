@@ -128,6 +128,29 @@ header nav ul li a:hover {
 
 /*
   ========================================
+  MENU TOGGLE (HAMBURGER)
+  ========================================
+  Styles for the mobile navigation toggle button.
+*/
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.menu-toggle i {
+  color: var(--text-light-color);
+  font-size: calc(var(--font-size-base)*1.8);
+}
+
+#closeBtn {
+  display: none;
+}
+
+/*
+  ========================================
   Shop Section
   ========================================
 */
@@ -392,12 +415,233 @@ ul {
   line-height: 50px;
 }
 
-@media (max-width: 720px) {
-  footer {
-    padding: 40px 25px 25px;
-  }  
-  .footer-col {
-      width: 100%;
-      margin-bottom: 30px;
-    }
+
+/*
+  ========================================
+  RESPONSIVE STYLES - MEDIA QUERIES
+  ========================================
+*/
+/* 
+  Breakpoint 1: Tablet Devices
+*/
+/*------- Responsive Navbar --------*/
+@media (max-width: 768px) {
+  nav .menu {
+    display: none;
+  }
+
+  #menuBtn {
+    display: block;
+  }
+
+  header {
+    position: relative;
+  }
+  nav .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 71px;
+    left: 0px;
+    background-color: var(--surface-color);
+    width: 25%;
+    padding: 25px 0;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+  }
+
+  nav .menu li a {
+    font-size: calc(var(--font-size-base)*1.4);
+    padding: var(--spacing-unit) 0;
+  }
+
+  header nav ul li a:hover, header nav ul li a:focus, header nav ul li a:active  {
+  color: var(--text-shadow-color);
+}
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/*----------Shop Section---------*/
+#shop {
+  padding: calc(var(--spacing-unit)*3)0;
+}
+
+#shop .container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: calc(var(--spacing-unit)*2);
+}
+
+.sketch-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: calc(var(--spacing-unit)*2);
+}
+
+
+/* ----------Footer Section ------*/
+@media (max-width: 768px) {
+  footer .container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: calc(var(--spacing-unit) * 2);
+  }
+
+  .footer-col .social-links a {
+    margin: 10px;
+  }
+
+  .copyright {
+    border-top: 1px solid var(--text-light-color);
+    color: #a0a0a0;
+    text-align: center;
+    height: 30px;
+    line-height: 50px;
+  }
+}
+
+/* 
+ ========= Breakpoint 2: Mobile Devices ==========
+*/
+/*------ Navbar ------*/
+@media (max-width: 480px) {
+  nav .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    background-color: var(--surface-color);
+    width: 50%;
+    padding: 25px 0;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+  }
+
+  nav .menu li a {
+    font-size: calc(var(--font-size-base)*1.1);
+    padding: var(--spacing-unit) 0;
+  }
+}
+
+/*----------Shop Section---------*/
+@media (max-width: 480px) {
+  #shop {
+  padding: calc(var(--spacing-unit)*2) 0 calc(var(--spacing-unit)*3);
+}
+
+#shop .container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--spacing-unit);
+}
+
+#shop .container h2 {
+  text-align: center;
+  font-size: calc(var(--font-size-base)*2);
+  margin-bottom: calc(var(--spacing-unit)*2);
+}
+
+.sketch-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: calc(var(--spacing-unit)*1);
+}
+
+.sketch-card img {
+  /* height: 350px; */
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+}
+
+/* ----------Footer Section ------*/
+@media (max-width: 480px) {
+  footer .container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: calc(var(--spacing-unit) * 1);
+  }
+
+  .footer-row {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-unit));
+  margin-bottom: calc(var(--spacing-unit) * 1);
+}
+
+
+.footer-row h3 {
+  margin-bottom: 0.5rem;
+}
+
+.fp-name h3 {
+  margin-bottom: 0.2px;
+}
+
+.about {
+  width: 100%;
+  padding-right: calc(var(--spacing-unit)0);
+}
+
+.about p {
+  font-size: var((--font-size-base));
+  word-break: break-all;
+}
+
+.footer-btn a{
+  font-size: 0.9rem;
+}
+
+.services {
+  width: 100%;
+}
+.media {
+  width: 100%;
+}
+
+  .footer-col .social-links a {
+    margin: 10px;
+  }
+
+  .copyright {
+    border-top: 1px solid var(--text-light-color);
+    color: #a0a0a0;
+    text-align: center;
+    height: 40px;
+    line-height: 50px;
+  }
+  .copyright p {
+    font-size: 0.9rem;
+  }
+}
+
+/* 
+ ========= Breakpoint 3: Small Mobile Devices ==========
+*/
+@media (max-width: 376px) {
+  #hero .container .intro {
+  display: flex;
+  flex-direction: column;
+  padding-left: calc(var(--spacing-unit)*3);
+  padding-right: calc(var(--spacing-unit)*2);
+}
+
+.get-in-touch {
+    width: 46%;
+  }
+
+  .copyright {
+    border-top: 1px solid var(--text-light-color);
+    color: #a0a0a0;
+    text-align: center;
+    height: 40px;
+    line-height: 50px;
+  }
+  .copyright p {
+    font-size: 0.8rem;
+  }
 }

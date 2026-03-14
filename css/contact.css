@@ -126,41 +126,27 @@ header nav ul li a:hover {
   color: var(--text-shadow-color);
 }
 
-#menuBtn,
-#closeBtn {
-  cursor: pointer;
-  font-size: 23px;
+/*
+  ========================================
+  MENU TOGGLE (HAMBURGER)
+  ========================================
+  Styles for the mobile navigation toggle button.
+*/
+.menu-toggle {
   display: none;
-  color: #e5e4e2;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
-@media (max-width: 992px) {
-  /* Responsive Navbar */
-  nav .menu {
-    display: none;
-  }
+.menu-toggle i {
+  color: var(--text-light-color);
+  font-size: calc(var(--font-size-base)*1.8);
+}
 
-  #menuBtn {
-    display: block;
-  }
-
-  header {
-    position: relative;
-  }
-  nav .menu {
-    flex-direction: column;
-    position: absolute;
-    top: 77px;
-    left: 0px;
-    background-color: #36454f;
-    width: 50%;
-    padding: 15px 0;
-    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.588);
-    text-align: center;
-  }
-  nav .menu li {
-    margin: 20px 0px;
-  }
+#closeBtn {
+  display: none;
 }
 
 /*
@@ -209,12 +195,6 @@ header nav ul li a:hover {
   border-radius: 0 15px 15px 0;
 }
 
-/* .contact-info {
-  background-color: #36454f;
-  width: 400px;
-  
-  
-} */
 .contact-info h3 {
   font-size: calc(var(--font-size-base) * 1.5);
   margin-bottom: var(--spacing-unit);
@@ -445,7 +425,7 @@ iframe {
   margin-bottom: 5px;
 } */
 
-@media (max-width: 720px) {
+/* @media (max-width: 720px) {
   .user-info {
     height: 100%;
     grid-template-columns: 1fr;
@@ -494,7 +474,7 @@ iframe {
     color: #fffff0;
     font-size: 16px;
   }
-}
+} */
 
 /*
   ========================================
@@ -642,12 +622,277 @@ ul {
   line-height: 50px;
 }
 
-@media (max-width: 720px) {
-  footer {
-    padding: 40px 25px 25px;
+
+/*
+  ========================================
+  RESPONSIVE STYLES - MEDIA QUERIES
+  ========================================
+*/
+/* 
+  Breakpoint 1: Tablet Devices
+*/
+/*------- Responsive Navbar --------*/
+@media (max-width: 768px) {
+  nav .menu {
+    display: none;
   }
-  .footer-col {
-    width: 100%;
-    margin-bottom: 30px;
+
+  #menuBtn {
+    display: block;
+  }
+
+  header {
+    position: relative;
+  }
+  nav .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 71px;
+    left: 0px;
+    background-color: var(--surface-color);
+    width: 25%;
+    padding: 25px 0;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+  }
+
+  nav .menu li a {
+    font-size: calc(var(--font-size-base)*1.4);
+    padding: var(--spacing-unit) 0;
+  }
+
+  header nav ul li a:hover, header nav ul li a:focus, header nav ul li a:active  {
+  color: var(--text-shadow-color);
+}
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/*----------Contact Section-------*/
+#contact {
+  padding: calc(var(--spacing-unit) * 3) 0;
+}
+
+#contact .container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: calc(var(--spacing-unit)*2);
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-unit)*2);
+}
+
+.contact-info {
+  order: 2;
+  background-color: #36454f;
+  width: 100%;
+  padding: calc(var(--spacing-unit) * 1.5);
+  border-radius: 15px;
+}
+
+#contact-form {
+  order: 1;
+  background-color: #71797e;
+  width: 100%;
+  padding: calc(var(--spacing-unit) * 1.5);
+  border-radius: 15px;
+}
+
+iframe {
+  width: 100%;
+  height: 240px;
+  border-radius: var(--border-radius);
+}
+
+/* ----------Footer Section ------*/
+@media (max-width: 768px) {
+  footer .container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: calc(var(--spacing-unit) * 2);
+  }
+
+  .footer-col .social-links a {
+    margin: 10px;
+  }
+
+  .copyright {
+    border-top: 1px solid var(--text-light-color);
+    color: #a0a0a0;
+    text-align: center;
+    height: 30px;
+    line-height: 50px;
+  }
+}
+
+
+/* 
+ ========= Breakpoint 2: Mobile Devices ==========
+*/
+/*------ Navbar ------*/
+@media (max-width: 480px) {
+  nav .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    background-color: var(--surface-color);
+    width: 50%;
+    padding: 25px 0;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+  }
+
+  nav .menu li a {
+    font-size: calc(var(--font-size-base)*1.1);
+    padding: var(--spacing-unit) 0;
+  }
+}
+
+/*-----------Contact Section-------*/
+@media (max-width: 480px) {
+  #contact {
+  padding: calc(var(--spacing-unit) * 2) 0 calc(var(--spacing-unit) * 3);
+}
+
+#contact .container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--spacing-unit);
+}
+
+#contact .container > h2 {
+  text-align: center;
+  font-size: calc(var(--font-size-base) * 2);
+}
+
+#contact .container > p {
+  text-align: center;
+  font-size: calc(var(--font-size-base) * 1.0);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.contact-info {
+  background-color: #36454f;
+  width: 100%;
+  padding: calc(var(--spacing-unit) * 1);
+  border-radius: 8px;
+}
+
+#contact-form {
+  background-color: #71797e;
+  width: 100%;
+  padding: calc(var(--spacing-unit) * 1);
+  border-radius: 8px;
+}
+
+iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: var(--border-radius);
+}
+
+#contact label {
+  display: inline-block;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 0.3rem;
+  color: var(--text-light-color);
+}
+
+}
+
+/* ----------Footer Section ------*/
+@media (max-width: 480px) {
+  footer .container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: calc(var(--spacing-unit) * 1);
+  }
+
+  .footer-row {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-unit));
+  margin-bottom: calc(var(--spacing-unit) * 1);
+}
+
+
+.footer-row h3 {
+  margin-bottom: 0.5rem;
+}
+
+.fp-name h3 {
+  margin-bottom: 0.2px;
+}
+
+.about {
+  width: 100%;
+  padding-right: calc(var(--spacing-unit)0);
+}
+
+.about p {
+  font-size: var((--font-size-base));
+  word-break: break-all;
+}
+
+.footer-btn a{
+  font-size: 0.9rem;
+}
+
+.services {
+  width: 100%;
+}
+.media {
+  width: 100%;
+}
+
+  .footer-col .social-links a {
+    margin: 10px;
+  }
+
+  .copyright {
+    border-top: 1px solid var(--text-light-color);
+    color: #a0a0a0;
+    text-align: center;
+    height: 40px;
+    line-height: 50px;
+  }
+  .copyright p {
+    font-size: 0.9rem;
+  }
+}
+
+/* 
+ ========= Breakpoint 3: Small Mobile Devices ==========
+*/
+@media (max-width: 376px) {
+  #hero .container .intro {
+  display: flex;
+  flex-direction: column;
+  padding-left: calc(var(--spacing-unit)*3);
+  padding-right: calc(var(--spacing-unit)*2);
+}
+
+.get-in-touch {
+    width: 46%;
+  }
+
+  .copyright {
+    border-top: 1px solid var(--text-light-color);
+    color: #a0a0a0;
+    text-align: center;
+    height: 40px;
+    line-height: 50px;
+  }
+  .copyright p {
+    font-size: 0.8rem;
   }
 }

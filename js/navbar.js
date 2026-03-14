@@ -3,7 +3,7 @@ const closeBtn = document.getElementById("closeBtn");
 const menu = document.getElementById("menu_list");
 
 function showMenu() {
-  menu.style.display = "block";
+  menu.style.display = "flex";
   closeBtn.style.display = "block";
   menuBtn.style.display = "none";
 }
