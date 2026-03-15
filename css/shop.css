@@ -57,6 +57,8 @@
 html,
 body {
   height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 #root,
@@ -426,6 +428,11 @@ ul {
 */
 /*------- Responsive Navbar --------*/
 @media (max-width: 768px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
   nav .menu {
     display: none;
   }
@@ -507,6 +514,11 @@ ul {
 */
 /*------ Navbar ------*/
 @media (max-width: 480px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
   nav .menu {
     flex-direction: column;
     position: absolute;
@@ -622,7 +634,7 @@ ul {
 /* 
  ========= Breakpoint 3: Small Mobile Devices ==========
 */
-@media (max-width: 376px) {
+@media (max-width: 394px) {
   #hero .container .intro {
   display: flex;
   flex-direction: column;
@@ -630,18 +642,27 @@ ul {
   padding-right: calc(var(--spacing-unit)*2);
 }
 
-.get-in-touch {
-    width: 46%;
-  }
+  .sketch-container {
+  grid-template-columns: repeat(1, 1fr);
+}
 
-  .copyright {
+  /* .copyright {
     border-top: 1px solid var(--text-light-color);
     color: #a0a0a0;
     text-align: center;
     height: 40px;
     line-height: 50px;
-  }
+  } */
   .copyright p {
     font-size: 0.8rem;
+  }
+}
+
+/* 
+ ========= Breakpoint 4: Reset to Desktop and wide screen Devices ==========
+*/
+@media (min-width: 1024px) {
+  .sketch-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

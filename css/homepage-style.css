@@ -58,7 +58,7 @@
 html,
 body {
   height: 100%;
-  /* width: 100%; */
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -564,6 +564,12 @@ ul {
 */
 /*------- Responsive Navbar --------*/
 @media (max-width: 768px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
   nav .menu {
     display: none;
   }
@@ -572,9 +578,6 @@ ul {
     display: block;
   }
 
-  header {
-    position: relative;
-  }
   nav .menu {
     flex-direction: column;
     position: absolute;
@@ -775,6 +778,12 @@ ul {
 */
 /*------ Navbar ------*/
 @media (max-width: 480px) {
+   header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
   nav .menu {
     flex-direction: column;
     position: absolute;
@@ -823,12 +832,12 @@ ul {
   #hero .container .intro {
   display: flex;
   flex-direction: column;
-  padding-left: calc(var(--spacing-unit)*2);
-  padding-right: var(--spacing-unit);
+  padding: 0 calc(var(--spacing-unit)*3);
+  /* padding-right: var(--spacing-unit); */
 }
 
   .get-in-touch {
-    width: 43%;
+    width: 48%;
   }
 
  
@@ -1003,25 +1012,21 @@ ul {
  /* 
  ========= Breakpoint 3: Small Mobile Devices ==========
 */
-@media (max-width: 376px) {
+@media (max-width: 394px) {
   #hero .container .intro {
   display: flex;
   flex-direction: column;
-  padding-left: calc(var(--spacing-unit)*3);
-  padding-right: calc(var(--spacing-unit)*2);
+  padding: 0 calc(var(--spacing-unit)*3);
 }
 
-.get-in-touch {
-    width: 46%;
-  }
 
-  .copyright {
+  /* .copyright {
     border-top: 1px solid var(--text-light-color);
     color: #a0a0a0;
     text-align: center;
     height: 40px;
     line-height: 50px;
-  }
+  } */
   .copyright p {
     font-size: 0.8rem;
   }
