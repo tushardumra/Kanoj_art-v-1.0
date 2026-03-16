@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Page</title>
+    <title>Kanoj - Sketch Artist</title>
     <link rel="stylesheet" href="./css/contact.css" />
 
     <!-- font awesome cdn link -->
@@ -22,6 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allison&family=Great+Vibes&family=Island+Moments&family=Qwitcher+Grypen:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="js/navbar.js" defer></script>
   </head>
   <body>
     <!-- Header Section contains Navigation Bar -->
@@ -38,13 +39,17 @@
           </ul>
           <!-- Toggle Navbar Buttons -->
           <button
-          class="menu-toggle"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
+            class="menu-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
           >
-          <i class="fa-solid fa-bars" id="menuBtn" onclick="showMenu()"></i>
-          <i class="fa-solid fa-xmark" id="closeBtn" onclick="closeMenu()"></i>
-        </button>
+            <i class="fa-solid fa-bars" id="menuBtn" onclick="showMenu()"></i>
+            <i
+              class="fa-solid fa-xmark"
+              id="closeBtn"
+              onclick="closeMenu()"
+            ></i>
+          </button>
         </nav>
       </div>
     </header>
@@ -206,6 +211,5 @@
         </div>
       </div>
     </footer>
-    <script src="js/navbar.js"></script>
   </body>
 </html>

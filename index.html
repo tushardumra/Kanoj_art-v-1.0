@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
+    <title>Kanoj - Sketch Artist</title>
     <link rel="stylesheet" href="css/homepage-style.css" />
 
     <!-- font-awesome cdn link -->
@@ -22,12 +22,13 @@
       href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allison&family=Great+Vibes&family=Island+Moments&family=Qwitcher+Grypen:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="js/navbar.js" defer></script>
   </head>
   <body>
     <!-- Header Section contains Navigation Bar -->
     <header>
       <div class="container">
-        <h2 class="logo">kanoj art.</h2>
+        <h2 class="logo">kanoj art</h2>
         <nav>
           <ul class="menu" id="menu_list">
             <li class="link-items"><a href="homepage.html">Home</a></li>
@@ -38,29 +39,35 @@
           </ul>
           <!-- Toggle Navbar Buttons -->
           <button
-          class="menu-toggle"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
+            class="menu-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
           >
-          <i class="fa-solid fa-bars" id="menuBtn" onclick="showMenu()"></i>
-          <i class="fa-solid fa-xmark" id="closeBtn" onclick="closeMenu()"></i>
-        </button>
+            <i class="fa-solid fa-bars" id="menuBtn" onclick="showMenu()"></i>
+            <i
+              class="fa-solid fa-xmark"
+              id="closeBtn"
+              onclick="closeMenu()"
+            ></i>
+          </button>
         </nav>
       </div>
     </header>
-
-    <!-- <i class="fa-solid fa-bars" id="menuBtn" onclick="showMenu()"></i>
-      <i class="fa-solid fa-xmark" id="closeBtn" onclick="closeMenu()"></i> -->
 
     <!-- Main Section  -->
     <main>
       <section id="hero">
         <div class="container">
           <div class="intro">
-            <h1>Welcome to the official portfolio of Kanoj.</h1>
+            <h1>Welcome to the official portfolio of Kanoj</h1>
             <p class="hero-subtitle">Sketch Artist</p>
             <p>Capturing emotion and detail through every line and shade.</p>
-            <a href="/contact.html" class="get-in-touch">Commission a Artwork</a>
+            <div>
+              <a href="/contact.html" class="get-in-touch"
+              >Commission a Artwork</a
+            >
+            </div>
+          
           </div>
           <div class="illustration">
             <div class="sticker">
@@ -69,27 +76,6 @@
           </div>
         </div>
       </section>
-      <!-- <div class="homepage">
-      <div class="hp-grid text">
-        <h1>Welcome to the official portfolio <br> of Kanoj.</h1>
-        <p>Capturing emotion and detail through every line and shade.</p>
-        <button><a href="./contact.html">Commission a Artwork</a></button>
-      </div>
-      <div class="hp-grid artwork">
-        <div class="marquee-box">
-          <h2>Featured Artwork</h2>
-          <marquee behavior="alternate" direction="" scrollamount="5">
-            <img src="./art-images/lion.jpeg" alt="">
-            <video src="./videos/charcoal-teaser.mp4" autoplay loop></video>
-            <video src="./videos/moose_wala.mp4" loop autoplay muted></video>
-            <video src="./videos/model (2).mp4" autoplay loop></video>
-            <video src="./videos/rock_video.mp4" loop autoplay muted></video>
-            <img src="./art-images/micky.jpg" alt="">
-            <img src="./art-images/horse.jpg" alt="">
-          </marquee>
-        </div>
-      </div>
-    </div> -->
 
       <!-- Banner Section -->
       <section id="banner">
@@ -100,11 +86,24 @@
               <img src="./images/homepage_background1.jpg" alt="" />
               <img src="./images/homepage_background (2).jpg" alt="" />
             </div>
-            <button class="slider-btn prev"><i class="fa-solid fa-angle-left"></i></button>
-            <button class="slider-btn next"><i class="fa-solid fa-angle-right"></i></button>
+            <button
+              class="slider-btn prev"
+              type="button"
+              title="slider-btn prev"
+            >
+              <i class="fa-solid fa-angle-left"></i>
+            </button>
+            <button
+              class="slider-btn next"
+              type="button"
+              title="slider-btn next"
+            >
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
           </div>
         </div>
       </section>
+
       <!-- Features Section -->
       <section id="features-section">
         <div class="container">
@@ -112,7 +111,7 @@
           <div class="features">
             <div class="feat-box">
               <i class="fa-solid fa-indian-rupee-sign"></i>
-              <h5>Affordable Prices</h5>
+              <p>Affordable Prices</p>
               <p>
                 We provide the best discounts and affordable prices in the
                 market
@@ -120,7 +119,7 @@
             </div>
             <div class="feat-box">
               <i class="fa-solid fa-image"></i>
-              <h5>Free Frame</h5>
+              <p>Free Frame</p>
               <p>
                 We do not charge extra for the frame; frame charges are
                 included, whatever your frame-size is.
@@ -128,7 +127,7 @@
             </div>
             <div class="feat-box">
               <i class="fa-solid fa-truck"></i>
-              <h5>Pan India Delivery</h5>
+              <p>Pan India Delivery</p>
               <p>
                 We deliver wherever you want; delivery charges are other than
                 the sketch price.
@@ -138,58 +137,33 @@
         </div>
       </section>
 
-      <!-- <div class="features-section">
-      <h2 class="hp-headings">Why Choose Us</h2>
-      <div class="features">
-        <div class="feat-box">
-          <i class="fa-solid fa-indian-rupee-sign"></i>
-          <h5>Affordable Prices</h5>
-          <p>We provide the best discounts and affordable prices in the market</p>
-        </div>
-        <div class="feat-box">
-          <i class="fa-solid fa-image"></i>
-          <h5>Free Frame</h5>
-          <p>We do not charge extra for the frame; frame charges are included, whatever your frame-size is.</p>
-        </div>
-        <div class="feat-box">
-          <i class="fa-solid fa-truck"></i>
-          <h5>Pan India Delivery</h5>
-          <p>We deliver wherever you want; delivery charges are other than the sketch price.</p>
-        </div>
-      </div>
-    </div> -->
-
       <section id="bts-section">
         <div class="container">
           <h2>How we work - Behind the Scenes</h2>
           <div class="videos-container">
-            <video src="./videos/bts1.mp4" controls loop autoplay muted></video>
-            <video src="./videos/bts5.mp4" controls loop autoplay muted></video>
-            <video src="./videos/bts3.mp4" controls loop autoplay muted></video>
-            <video src="./videos/bts4.mp4" controls loop autoplay muted></video>
-            <video src="./videos/bts2.mp4" controls loop autoplay muted></video>
-            <video src="./videos/bts6.mp4" controls loop autoplay muted></video>
+            <video src="./videos/bts1.mp4" autoplay controls loop muted>
+              <track kind="captions" srclang="en" label="english_captions" />
+            </video>
+            <video src="./videos/bts5.mp4" autoplay controls loop  muted>
+              <track kind="captions" srclang="en" label="english_captions" />
+            </video>
+            <video src="./videos/bts3.mp4" autoplay controls loop  muted>
+              <track kind="captions" srclang="en" label="english_captions" />
+            </video>
+            <video src="./videos/bts4.mp4" autoplay controls loop  muted>
+              <track kind="captions" srclang="en" label="english_captions" />
+            </video>
+            <video src="./videos/bts2.mp4" autoplay controls loop  muted>
+              <track kind="captions" srclang="en" label="english_captions" />
+            </video>
+            <video src="./videos/bts6.mp4" autoplay controls loop  muted>
+              <track kind="captions" srclang="en" label="english_captions" />
+            </video>
           </div>
         </div>
       </section>
-      <!-- <div class="bts-section">
-        <h2 class="hp-headings">How we work - Behind the Scenes</h2>
-        <div class="bts-box">
-          <div class="bts-videos">
-            <video src="./videos/bts1.mp4" controls loop autoplay muted></video>
-          </div>
-          <div class="bts-videos">
-            <video src="./videos/bts5.mp4" controls loop autoplay muted></video>
-          </div>
-          <div class="bts-videos">
-            <video src="./videos/bts3.mp4" controls loop autoplay muted></video>
-          </div>
-          <div class="bts-videos">
-            <video src="./videos/bts4.mp4" controls loop autoplay muted></video>
-          </div>
-        </div>
-      </div> -->
     </main>
+
     <!-- Footer section  -->
     <footer>
       <div class="container">
@@ -201,7 +175,6 @@
                 <h3>Kanoj</h3>
                 <p>Sketch Artist</p>
               </div>
-          
             </div>
             <p>
               Professional sketch artist specializing in realistic portraits and
@@ -229,33 +202,37 @@
           <div class="footer-col media">
             <h3>Stay Updated</h3>
             <div class="social-links">
-              <a href="https://www.facebook.com/share/1FLMpk91k3/" id="fb"
+              <a
+                href="https://www.facebook.com/share/1FLMpk91k3/"
+                id="fb"
+                aria-label="Go to Facebook page of Kanoj art"
                 ><i class="fa-brands fa-facebook-f"></i
               ></a>
               <a
                 href="https://www.instagram.com/kanoj_art?igsh=MWJvdzBqcjF6NXFyZQ=="
                 id="insta"
+                aria-label="Go to Instagram Profile of Kanoj art"
                 ><i class="fa-brands fa-instagram"></i
               ></a>
-              <a href="https://wa.me/918360639849" id="whp"
+              <a
+                href="https://wa.me/918360639849"
+                id="whp"
+                aria-label="Go to Whatsapp of Kanoj art"
                 ><i class="fa-brands fa-whatsapp"></i
               ></a>
               <a
                 href="https://youtube.com/@kanojart9010?si=kCD3GN-nYsrUakPv"
                 id="yt"
+                aria-label="Go to Youtube Channel of Kanoj art"
                 ><i class="fa-brands fa-youtube"></i
               ></a>
             </div>
           </div>
         </div>
         <div class="copyright">
-          <p>
-             © 2025 Kanoj-art. All rights reserved | Made by Tushar
-          </p>
+          <p>© 2025 Kanoj-art. All rights reserved | Made by Tushar</p>
         </div>
       </div>
     </footer>
-
-    <script src="js/navbar.js"></script>
   </body>
 </html>

@@ -1,26 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About</title>
-  <link rel="stylesheet" href="css/about.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanoj - Sketch Artist</title>
+    <link rel="stylesheet" href="css/about.css" />
 
-  <!-- font awesome cdn link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <!-- font-awesome cdn link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font-awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <!-- google fonts link -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allison&family=Great+Vibes&family=Island+Moments&family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
-
-</head>
-<body>
-
-  <!-- Header Section contains Navigation Bar -->
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allison&family=Great+Vibes&family=Island+Moments&family=Qwitcher+Grypen:wght@400;700&display=swap"
+    rel="stylesheet"
+    />
+    <script src="js/navbar.js" defer></script>
+  </head>
+  <body>
+    <!-- Header Section contains Navigation Bar -->
     <header>
       <div class="container">
         <h2 class="logo">kanoj art.</h2>
@@ -34,64 +48,56 @@
           </ul>
           <!-- Toggle Navbar Buttons -->
           <button
-          class="menu-toggle"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
+            class="menu-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
           >
-          <i class="fa-solid fa-bars" id="menuBtn" onclick="showMenu()"></i>
-          <i class="fa-solid fa-xmark" id="closeBtn" onclick="closeMenu()"></i>
-        </button>
+            <i class="fa-solid fa-bars" id="menuBtn" onclick="showMenu()"></i>
+            <i
+              class="fa-solid fa-xmark"
+              id="closeBtn"
+              onclick="closeMenu()"
+            ></i>
+          </button>
         </nav>
       </div>
     </header>
 
-  <!-- Main Section contains bio information -->
-  <main>
-    <!-- <div class="about-page">
-      <div class="grid-tracks bio">
-      
-        <h1>Meet the Artist</h1>
-        <p>I am Kanoj, a skilled professional sketch artist from Mullanpur, Ludhiana, specialising in portraits, landscapes, conceptual art, and custom artwork. I have been Practising since 2019, and I have developed a realistic style that combines precision with creativity. I am strongly attentive to details. I transform simple ideas into striking visuals that capture emotion and depth. Whether it’s a personal commission or a larger artistic project, my work reflects dedication, craftsmanship, and a passion for bringing stories to life on paper.</p>
-      </div>
-      <div class="grid-tracks pic1">
-        <div class="photo1">
-        
-        </div>
-      </div>
-
-      <div class="grid-tracks pic2">
-        <div class="photo2">
-          
-        </div>
-      </div>
-
-    </div> -->
-  
-    <section id="about">
-      <div class="container">
-        <h2>About Me</h2>
-        <div class="about-content">
-          <div class="about-text">
-            <p>
-              I am Kanoj, a skilled professional sketch artist from Mullanpur, Ludhiana, specialising in portraits, landscapes, conceptual art, and custom artwork. I have been Practising since 2019, and I have developed a realistic style that combines precision with creativity. I am strongly attentive to details. I transform simple ideas into striking visuals that capture emotion and depth. Whether it’s a personal commission or a larger artistic project, my work reflects dedication, craftsmanship, and a passion for bringing stories to life on paper.
-            </p>
-          </div>
-          <div class="about-image">
-            <div class="image-grid">
-              <div class="img-1">
-                <img src="/images/kanoj2.jpeg" alt="">
-              </div>
-              <div class="img-2">
-                <img src="/images/kanoj3.jpeg" alt="">
+    <!-- Main Section contains bio information -->
+    <main>
+      <section id="about">
+        <div class="container">
+          <h2>About Me</h2>
+          <div class="about-content">
+            <div class="about-text">
+              <p>
+                I am Kanoj, a skilled professional sketch artist from Mullanpur,
+                Ludhiana, specialising in portraits, landscapes, conceptual art,
+                and custom artwork. I have been Practising since 2019, and I
+                have developed a realistic style that combines precision with
+                creativity. I am strongly attentive to details. I transform
+                simple ideas into striking visuals that capture emotion and
+                depth. Whether it’s a personal commission or a larger artistic
+                project, my work reflects dedication, craftsmanship, and a
+                passion for bringing stories to life on paper.
+              </p>
+            </div>
+            <div class="about-image">
+              <div class="image-grid">
+                <div class="img-1">
+                  <img src="/images/kanoj2.jpeg" alt="" />
+                </div>
+                <div class="img-2">
+                  <img src="/images/kanoj3.jpeg" alt="" />
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <!-- Footer section  -->
+    <!-- Footer section  -->
     <footer>
       <div class="container">
         <div class="footer-row">
@@ -102,7 +108,6 @@
                 <h3>Kanoj</h3>
                 <p>Sketch Artist</p>
               </div>
-          
             </div>
             <p>
               Professional sketch artist specializing in realistic portraits and
@@ -150,12 +155,9 @@
           </div>
         </div>
         <div class="copyright">
-          <p>
-             © 2025 Kanoj-art. All rights reserved | Made by Tushar
-          </p>
+          <p>© 2025 Kanoj-art. All rights reserved | Made by Tushar</p>
         </div>
       </div>
     </footer>
-  <script src="js/navbar.js"></script>
-</body>
+  </body>
 </html>

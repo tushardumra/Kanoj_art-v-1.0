@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shop</title>
+    <title>Kanoj - Sketch Artist</title>
     <link rel="stylesheet" href="./css/shop.css" />
 
     <!-- font awesome cdn link -->
@@ -14,7 +14,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    
     <!-- google fonts link -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,6 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allison&family=Great+Vibes&family=Island+Moments&family=Qwitcher+Grypen:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="js/navbar.js" defer></script>
   </head>
   <body>
     <!-- Header Section contains Navigation Bar -->
@@ -38,13 +39,17 @@
           </ul>
           <!-- Toggle Navbar Buttons -->
           <button
-          class="menu-toggle"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
+            class="menu-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
           >
-          <i class="fa-solid fa-bars" id="menuBtn" onclick="showMenu()"></i>
-          <i class="fa-solid fa-xmark" id="closeBtn" onclick="closeMenu()"></i>
-        </button>
+            <i class="fa-solid fa-bars" id="menuBtn" onclick="showMenu()"></i>
+            <i
+              class="fa-solid fa-xmark"
+              id="closeBtn"
+              onclick="closeMenu()"
+            ></i>
+          </button>
         </nav>
       </div>
     </header>
@@ -56,7 +61,7 @@
           <h2>Art Shop</h2>
           <div class="sketch-container">
             <div class="sketch-card">
-              <img src="./sketch_photos/afgani_model1.jpeg" alt="" />
+              <img src="./images/afgani_model1 - Copy.jpg" alt="" />
               <div class="sketch-info">
                 <h3>“Elderly Man Smoking" Realistic Portrait</h3>
                 <p>
@@ -247,6 +252,5 @@
         </div>
       </div>
     </footer>
-    <script src="js/navbar.js"></script>
   </body>
 </html>

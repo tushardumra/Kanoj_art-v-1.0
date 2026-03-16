@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery</title>
+    <title>Kanoj - Sketch Artist</title>
     <link rel="stylesheet" href="./css/gallery.css" />
 
     <!-- font awesome cdn link -->
@@ -19,9 +19,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allison&family=Great+Vibes&family=Island+Moments&family=Qwitcher+Grypen:wght@400;700&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allison&family=Great+Vibes&family=Island+Moments&family=Qwitcher+Grypen:wght@400;700&display=swap"
+    rel="stylesheet"
     />
+    <script src="js/navbar.js" defer></script>
   </head>
   <body>
     <!-- Header Section contains Navigation Bar -->
@@ -38,13 +39,17 @@
           </ul>
           <!-- Toggle Navbar Buttons -->
           <button
-          class="menu-toggle"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
+            class="menu-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
           >
-          <i class="fa-solid fa-bars" id="menuBtn" onclick="showMenu()"></i>
-          <i class="fa-solid fa-xmark" id="closeBtn" onclick="closeMenu()"></i>
-        </button>
+            <i class="fa-solid fa-bars" id="menuBtn" onclick="showMenu()"></i>
+            <i
+              class="fa-solid fa-xmark"
+              id="closeBtn"
+              onclick="closeMenu()"
+            ></i>
+          </button>
         </nav>
       </div>
     </header>
@@ -70,12 +75,12 @@
         <section id="charcoal">
           <h3>Charcoal Portraits</h3>
           <div class="gallery-grid">
-          <img src="./sketch_photos/cilian_murphy.jpeg" alt="" />
-          <img src="./sketch_photos/afgani_model2.jpeg" alt="" />
-          <img src="./sketch_photos/afgani_model1.jpeg" alt="" />
-          <img src="./art-images/oldman.jpeg" alt="" />
-          <img src="./art-images/bk.jpeg" alt="" />
-          <img src="./art-images/lion.jpeg" alt="" />
+            <img src="./sketch_photos/cilian_murphy.jpeg" alt="" />
+            <img src="./sketch_photos/afgani_model2.jpeg" alt="" />
+            <img src="./sketch_photos/afgani_model1.jpeg" alt="" />
+            <img src="./art-images/oldman.jpeg" alt="" />
+            <img src="./art-images/bk.jpeg" alt="" />
+            <img src="./art-images/lion.jpeg" alt="" />
           </div>
         </section>
 
@@ -85,30 +90,26 @@
             <img src="./sketch_photos/model1.jpeg" alt="" />
             <img src="./sketch_photos/model2.jpeg" alt="" />
             <img src="./sketch_photos/model3.jpeg" alt="" />
-
           </div>
         </section>
-      
 
-      <section id="historic">
-        <h3>Historic Portraits</h3>
-        <div class="gallery-grid">
-          <img src="./art-images/baba_saheb.jpeg" alt="" />
-          <img src="./art-images/shere_panjab.jpeg" alt="" />
-          <img src="./art-images/mrp.jpeg" alt="" />
+        <section id="historic">
+          <h3>Historic Portraits</h3>
+          <div class="gallery-grid">
+            <img src="./art-images/baba_saheb.jpeg" alt="" />
+            <img src="./art-images/shere_panjab.jpeg" alt="" />
+            <img src="./art-images/mrp.jpeg" alt="" />
+          </div>
+        </section>
 
-        </div>
-      </section>
-
-      <section id="others">
-        <h3>Other Artworks</h3>
-        <div class="gallery-grid">
-          <img src="./art-images/trees.jpeg" alt="" />
-          <img src="./art-images/cards.jpeg" alt="" />
-          <img src="./art-images/14.jpeg" alt="" />
-
-        </div>
-      </section>
+        <section id="others">
+          <h3>Other Artworks</h3>
+          <div class="gallery-grid">
+            <img src="./art-images/trees.jpeg" alt="" />
+            <img src="./art-images/cards.jpeg" alt="" />
+            <img src="./art-images/14.jpeg" alt="" />
+          </div>
+        </section>
       </div>
     </main>
 
@@ -174,6 +175,5 @@
         </div>
       </div>
     </footer>
-    <script src="js/navbar.js"></script>
   </body>
 </html>

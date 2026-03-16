@@ -145,7 +145,7 @@ header nav ul li a:hover {
 
 .menu-toggle i {
   color: var(--text-light-color);
-  font-size: calc(var(--font-size-base)*1.8);
+  font-size: calc(var(--font-size-base) * 1.8);
 }
 
 #closeBtn {
@@ -186,7 +186,6 @@ header nav ul li a:hover {
   width: 40%;
   display: flex;
   align-items: center;
-  /* margin: 60px 0; */
 }
 
 #hero h1 {
@@ -204,12 +203,11 @@ header nav ul li a:hover {
 }
 
 #hero p:last-of-type {
-  margin-bottom: var(--spacing-unit);
+  margin-bottom: calc(var(--spacing-unit)*2);
 }
 
 .get-in-touch {
-  width: 26%;
-  padding: 10px;
+  padding: 12px;
   font-size: 15px;
   border-radius: var(--border-radius);
   color: var(--text-dark-color);
@@ -255,13 +253,6 @@ header nav ul li a:hover {
   flex-shrink: 0;
 }
 
-/* .slides .vids {
-  width: 100%;
-  height: 500px;
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-} */
 .slider-btn {
   position: absolute;
   top: 50%;
@@ -320,14 +311,14 @@ header nav ul li a:hover {
   background-color: var(--box-card-color);
   color: var(--text-dark-color);
 }
-.feat-box h5 {
+.feat-box p {
   font-size: calc(var(--font-size-base) * 1.1);
   font-weight: var(--font-weight-bold);
 }
-.feat-box p {
+.feat-box p:last-of-type {
   text-align: center;
   font-size: 15px;
-  color: #0505055e;
+  color: #000000ad;
 }
 
 .feat-box i {
@@ -364,7 +355,6 @@ header nav ul li a:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: calc(var(--spacing-unit) * 2);
-  /* margin: 0 120px;  */
 }
 
 .videos-container video {
@@ -372,43 +362,6 @@ header nav ul li a:hover {
   height: 500px;
   object-fit: cover;
 }
-
-/* @media (max-width: 720px) {
-  .homepage {
-    padding: 35px;
-    flex-direction: column;
-  }
-  .text {
-    padding: 100px;
-  }
-  .marquee-box {
-    height: 550px;
-    width: 550px;
-  }
-  .artwork {
-    padding: 50px;
-  }
-} */
-
-/* @media (max-width: 720px) {
-  .features {
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-  }
-  .features-section {
-    padding: 20px 150px 70px;
-  }
-  .hp-headings {
-    font-size: 30px;
-    text-align: center;
-    padding-bottom: 40px;
-  }
-  .bts-box {
-    flex-direction: column;
-    gap: 30px;
-  }
-} */
 
 /*
   ========================================
@@ -461,7 +414,7 @@ footer .container {
 }
 
 .fp-name p {
-  color: #a0a0a0;
+  color: #D9D9D9;
 }
 
 .footer-profile img {
@@ -485,14 +438,13 @@ footer .container {
   padding: 4px 9px;
   border-radius: 25px;
   font-size: 14px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #ffffff33;
   color: #fffff0;
   border: none;
 }
 
 .services h3,
 .media h3 {
-  /* font-size: calc(var(--font-size-base)*1.4); */
   color: var(--text-light-color);
   margin-bottom: var(--spacing-unit);
 }
@@ -591,13 +543,15 @@ ul {
   }
 
   nav .menu li a {
-    font-size: calc(var(--font-size-base)*1.1);
+    font-size: calc(var(--font-size-base) * 1.1);
     padding: var(--spacing-unit) 0;
   }
 
-  header nav ul li a:hover, header nav ul li a:focus, header nav ul li a:active  {
-  color: var(--text-shadow-color);
-}
+  header nav ul li a:hover,
+  header nav ul li a:focus,
+  header nav ul li a:active {
+    color: var(--text-shadow-color);
+  }
 
   .menu-toggle {
     display: block;
@@ -643,8 +597,13 @@ ul {
     justify-content: center;
   }
 
+  #hero p:last-of-type {
+  margin-bottom: calc(var(--spacing-unit)*1.5);
+  }
+
   .get-in-touch {
-    width: 24%;
+    padding: 10px;
+    font-size: 13.5px;
   }
 
   /*------- Banner Section --------*/
@@ -690,7 +649,7 @@ ul {
 
   .features {
     flex-wrap: wrap;
-    gap:calc(var(--spacing-unit)*1.7) 0;
+    gap: calc(var(--spacing-unit) * 1.7) 0;
   }
 
   .feat-box {
@@ -772,13 +731,12 @@ ul {
   }
 }
 
-
 /* 
  ========= Breakpoint 2: Mobile Devices ==========
 */
 /*------ Navbar ------*/
 @media (max-width: 480px) {
-   header {
+  header {
     position: sticky;
     top: 0;
     z-index: 100;
@@ -797,21 +755,20 @@ ul {
   }
 
   nav .menu li a {
-    font-size: calc(var(--font-size-base)*1.1);
+    font-size: calc(var(--font-size-base) * 1.1);
     padding: var(--spacing-unit) 0;
   }
 }
-
 
 /*---------Hero Section-------*/
 @media (max-width: 480px) {
   /* === Typography Adjustments === */
   #hero h1 {
-    font-size: 2.0rem; /* Down from 3.5rem */
+    font-size: 2rem;
     line-height: var(--line-height-base);
   }
   #hero .hero-subtitle {
-    font-size: 1.2rem; /* Down from 1.5rem*/
+    font-size: 1.2rem;
   }
 
   /* === Layout Adjustments === */
@@ -822,25 +779,26 @@ ul {
   #hero .container {
     display: flex;
     flex-direction: column;
-    /* justify-content: start; */
     gap: calc(var(--spacing-unit) * 2);
-    /* min-width: 480px; */
-    /* margin: 0 auto; */
-    padding: calc(var(--spacing-unit) * 1); /* Adds padding on the sides for smaller screens */
+    padding: calc(
+      var(--spacing-unit) * 1
+    ); /* Adds padding on the sides for smaller screens */
   }
 
   #hero .container .intro {
-  display: flex;
-  flex-direction: column;
-  padding: 0 calc(var(--spacing-unit)*3);
-  /* padding-right: var(--spacing-unit); */
-}
-
-  .get-in-touch {
-    width: 48%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 calc(var(--spacing-unit) * 2);
   }
 
- 
+  #hero p:last-of-type {
+  margin-bottom: calc(var(--spacing-unit)*1);
+  }
+
+  .get-in-touch {
+    padding: 8px;
+    font-size: 13px;
+  }
 
   /*------- Banner Section --------*/
   #banner {
@@ -852,20 +810,6 @@ ul {
     margin: 0 auto;
     padding: calc(var(--spacing-unit) * 1);
   }
-
-  /* .slider {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .slides img {
-    width: 100%;
-    height: 500px;
-    object-fit: initial;
-    flex-shrink: 0;
-  } */
 
   /* --------Features Section -------  */
   #features-section {
@@ -937,7 +881,6 @@ ul {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: calc(var(--spacing-unit) * 2);
-    /* margin: 0 120px;  */
   }
 
   .videos-container video {
@@ -957,41 +900,40 @@ ul {
   }
 
   .footer-row {
-  display: flex;
-  flex-direction: column;
-  gap: calc(var(--spacing-unit));
-  margin-bottom: calc(var(--spacing-unit) * 1);
-}
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing-unit));
+    margin-bottom: calc(var(--spacing-unit) * 1);
+  }
 
+  .footer-row h3 {
+    margin-bottom: 0.5rem;
+  }
 
-.footer-row h3 {
-  margin-bottom: 0.5rem;
-}
+  .fp-name h3 {
+    margin-bottom: 0.2px;
+  }
 
-.fp-name h3 {
-  margin-bottom: 0.2px;
-}
+  .about {
+    width: 100%;
+    padding-right: calc(var(--spacing-unit) 0);
+  }
 
-.about {
-  width: 100%;
-  padding-right: calc(var(--spacing-unit)0);
-}
+  .about p {
+    font-size: var((--font-size-base));
+    word-break: break-all;
+  }
 
-.about p {
-  font-size: var((--font-size-base));
-  word-break: break-all;
-}
+  .footer-btn a {
+    font-size: 0.9rem;
+  }
 
-.footer-btn a{
-  font-size: 0.9rem;
-}
-
-.services {
-  width: 100%;
-}
-.media {
-  width: 100%;
-}
+  .services {
+    width: 100%;
+  }
+  .media {
+    width: 100%;
+  }
 
   .footer-col .social-links a {
     margin: 10px;
@@ -1009,24 +951,16 @@ ul {
   }
 }
 
- /* 
+/* 
  ========= Breakpoint 3: Small Mobile Devices ==========
 */
 @media (max-width: 394px) {
   #hero .container .intro {
-  display: flex;
-  flex-direction: column;
-  padding: 0 calc(var(--spacing-unit)*3);
-}
+    display: flex;
+    flex-direction: column;
+    padding: 0 calc(var(--spacing-unit) * 3);
+  }
 
-
-  /* .copyright {
-    border-top: 1px solid var(--text-light-color);
-    color: #a0a0a0;
-    text-align: center;
-    height: 40px;
-    line-height: 50px;
-  } */
   .copyright p {
     font-size: 0.8rem;
   }

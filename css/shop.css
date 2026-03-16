@@ -98,7 +98,7 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
   /* We also apply our max-width and centering here. */
   max-width: var(--container-width);
   margin: 0 auto; /* Centers the container horizontally */
@@ -144,7 +144,7 @@ header nav ul li a:hover {
 
 .menu-toggle i {
   color: var(--text-light-color);
-  font-size: calc(var(--font-size-base)*1.8);
+  font-size: calc(var(--font-size-base) * 1.8);
 }
 
 #closeBtn {
@@ -157,7 +157,7 @@ header nav ul li a:hover {
   ========================================
 */
 #shop {
-  padding: calc(var(--spacing-unit)*4)0;
+  padding: calc(var(--spacing-unit) * 4) 0;
 }
 
 #shop .container {
@@ -167,14 +167,14 @@ header nav ul li a:hover {
 
 #shop .container h2 {
   text-align: center;
-  font-size: calc(var(--font-size-base)*2);
-  margin-bottom: calc(var(--spacing-unit)*4);
+  font-size: calc(var(--font-size-base) * 2);
+  margin-bottom: calc(var(--spacing-unit) * 4);
 }
 
 .sketch-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: calc(var(--spacing-unit)*3);
+  gap: calc(var(--spacing-unit) * 3);
 }
 
 .sketch-card {
@@ -191,7 +191,8 @@ header nav ul li a:hover {
   display: block;
 }
 
-.sketch-info, .sketch-link {
+.sketch-info,
+.sketch-link {
   padding: calc(var(--spacing-unit));
 }
 
@@ -214,66 +215,6 @@ header nav ul li a:hover {
   color: var(--text-light-color);
 }
 
-/* .main {
-  margin-bottom: 100px;
-}
-.main h1 {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 45px;
-  color: #353935;
-}
-.shop-container {
-  margin: 50px 150px 80px;
-  display: flex;
-  justify-content: center;
-  gap: 55px;
-  flex-wrap: wrap;
-}
-
-.item {
-  height: 490px;
-  width: 300px;
-  border: none;
-  border-radius: 5px;
-  background-color: #71797E;
-  box-shadow: 12px 12px 15px #353935,
-              -2px -2px 5px #36454F;
-}
-
-.photo img {
-  height: 350px;
-  width: 100%;
-  border-radius: 5px 5px 0 0;
-}
-
-.info {
-  padding: 10px 25px;
-  color: #E5E4E2;
-}
-.info h3 {
-  font-weight: bold;
-  font-size: 15px;
-}
-.info p {
-  margin: 10px 0;
-  font-size: 13px;
-} 
-
-.btns {
-  display: flex;
-  justify-content: space-around;
-}
-.btns button {
-  padding: 5px 10px;
-  border-radius: 25px;
-  font-size: 13px;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #FFFFF0;
-  border: none;
-  cursor: pointer;
-} */
-
 /*
   ========================================
   Footer SECTION
@@ -286,19 +227,19 @@ footer {
 footer .container {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: calc(var(--spacing-unit)*2) 0 0;
+  padding: calc(var(--spacing-unit) * 2) 0 0;
 }
 
 .footer-row {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: calc(var(--spacing-unit)*2)
+  margin-bottom: calc(var(--spacing-unit) * 2);
 }
 
 .about {
   width: 50%;
-  padding-right: calc(var(--spacing-unit)*5);
+  padding-right: calc(var(--spacing-unit) * 5);
 }
 
 .services {
@@ -320,7 +261,7 @@ footer .container {
   justify-content: center;
 }
 .fp-name h3 {
-  font-size: calc(var(--font-size-base)*1.4);
+  font-size: calc(var(--font-size-base) * 1.4);
   color: var(--text-light-color);
 }
 
@@ -354,8 +295,8 @@ footer .container {
   border: none;
 }
 
-.services h3, .media h3 {
-  /* font-size: calc(var(--font-size-base)*1.4); */
+.services h3,
+.media h3 {
   color: var(--text-light-color);
   margin-bottom: var(--spacing-unit);
 }
@@ -371,7 +312,6 @@ ul {
   font-size: 15px;
   text-decoration: none;
   color: #a0a0a0;
-  /* display: block; */
   transition: all 0.3s ease;
 }
 .footer-col ul li a:hover {
@@ -417,7 +357,6 @@ ul {
   line-height: 50px;
 }
 
-
 /*
   ========================================
   RESPONSIVE STYLES - MEDIA QUERIES
@@ -457,13 +396,15 @@ ul {
   }
 
   nav .menu li a {
-    font-size: calc(var(--font-size-base)*1.4);
+    font-size: calc(var(--font-size-base) * 1.4);
     padding: var(--spacing-unit) 0;
   }
 
-  header nav ul li a:hover, header nav ul li a:focus, header nav ul li a:active  {
-  color: var(--text-shadow-color);
-}
+  header nav ul li a:hover,
+  header nav ul li a:focus,
+  header nav ul li a:active {
+    color: var(--text-shadow-color);
+  }
 
   .menu-toggle {
     display: block;
@@ -472,21 +413,20 @@ ul {
 
 /*----------Shop Section---------*/
 #shop {
-  padding: calc(var(--spacing-unit)*3)0;
+  padding: calc(var(--spacing-unit) * 3) 0;
 }
 
 #shop .container {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: calc(var(--spacing-unit)*2);
+  padding: calc(var(--spacing-unit) * 2);
 }
 
 .sketch-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: calc(var(--spacing-unit)*2);
+  gap: calc(var(--spacing-unit) * 2);
 }
-
 
 /* ----------Footer Section ------*/
 @media (max-width: 768px) {
@@ -532,7 +472,7 @@ ul {
   }
 
   nav .menu li a {
-    font-size: calc(var(--font-size-base)*1.1);
+    font-size: calc(var(--font-size-base) * 1.1);
     padding: var(--spacing-unit) 0;
   }
 }
@@ -540,34 +480,33 @@ ul {
 /*----------Shop Section---------*/
 @media (max-width: 480px) {
   #shop {
-  padding: calc(var(--spacing-unit)*2) 0 calc(var(--spacing-unit)*3);
-}
+    padding: calc(var(--spacing-unit) * 2) 0 calc(var(--spacing-unit) * 3);
+  }
 
-#shop .container {
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: var(--spacing-unit);
-}
+  #shop .container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: var(--spacing-unit);
+  }
 
-#shop .container h2 {
-  text-align: center;
-  font-size: calc(var(--font-size-base)*2);
-  margin-bottom: calc(var(--spacing-unit)*2);
-}
+  #shop .container h2 {
+    text-align: center;
+    font-size: calc(var(--font-size-base) * 2);
+    margin-bottom: calc(var(--spacing-unit) * 2);
+  }
 
-.sketch-container {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: calc(var(--spacing-unit)*1);
-}
+  .sketch-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: calc(var(--spacing-unit) * 1);
+  }
 
-.sketch-card img {
-  /* height: 350px; */
-  width: 100%;
-  object-fit: cover;
-  display: block;
-}
-
+  .sketch-card img {
+    /* height: 350px; */
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
 }
 
 /* ----------Footer Section ------*/
@@ -579,41 +518,40 @@ ul {
   }
 
   .footer-row {
-  display: flex;
-  flex-direction: column;
-  gap: calc(var(--spacing-unit));
-  margin-bottom: calc(var(--spacing-unit) * 1);
-}
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing-unit));
+    margin-bottom: calc(var(--spacing-unit) * 1);
+  }
 
+  .footer-row h3 {
+    margin-bottom: 0.5rem;
+  }
 
-.footer-row h3 {
-  margin-bottom: 0.5rem;
-}
+  .fp-name h3 {
+    margin-bottom: 0.2px;
+  }
 
-.fp-name h3 {
-  margin-bottom: 0.2px;
-}
+  .about {
+    width: 100%;
+    padding-right: calc(var(--spacing-unit) 0);
+  }
 
-.about {
-  width: 100%;
-  padding-right: calc(var(--spacing-unit)0);
-}
+  .about p {
+    font-size: var((--font-size-base));
+    word-break: break-all;
+  }
 
-.about p {
-  font-size: var((--font-size-base));
-  word-break: break-all;
-}
+  .footer-btn a {
+    font-size: 0.9rem;
+  }
 
-.footer-btn a{
-  font-size: 0.9rem;
-}
-
-.services {
-  width: 100%;
-}
-.media {
-  width: 100%;
-}
+  .services {
+    width: 100%;
+  }
+  .media {
+    width: 100%;
+  }
 
   .footer-col .social-links a {
     margin: 10px;
@@ -636,23 +574,16 @@ ul {
 */
 @media (max-width: 394px) {
   #hero .container .intro {
-  display: flex;
-  flex-direction: column;
-  padding-left: calc(var(--spacing-unit)*3);
-  padding-right: calc(var(--spacing-unit)*2);
-}
+    display: flex;
+    flex-direction: column;
+    padding-left: calc(var(--spacing-unit) * 3);
+    padding-right: calc(var(--spacing-unit) * 2);
+  }
 
   .sketch-container {
-  grid-template-columns: repeat(1, 1fr);
-}
+    grid-template-columns: repeat(1, 1fr);
+  }
 
-  /* .copyright {
-    border-top: 1px solid var(--text-light-color);
-    color: #a0a0a0;
-    text-align: center;
-    height: 40px;
-    line-height: 50px;
-  } */
   .copyright p {
     font-size: 0.8rem;
   }
