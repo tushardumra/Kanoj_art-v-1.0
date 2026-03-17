@@ -178,6 +178,9 @@ header nav ul li a:hover {
 }
 
 .sketch-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: var(--box-card-color);
   border-radius: var(--border-radius);
   box-shadow: 0 4px 8px var(--shadow-color);
@@ -185,7 +188,6 @@ header nav ul li a:hover {
 }
 
 .sketch-card img {
-  /* height: 350px; */
   width: 100%;
   object-fit: cover;
   display: block;
@@ -197,10 +199,12 @@ header nav ul li a:hover {
 }
 
 .sketch-info h3 {
+  font-size: var(--font-size-base);
   margin-bottom: var(--spacing-unit);
 }
 
 .sketch-info p {
+  font-size: 14px;
   word-break: break-all;
 }
 
@@ -355,6 +359,15 @@ ul {
   text-align: center;
   height: 50px;
   line-height: 50px;
+}
+
+.copyright a {
+  text-decoration: none;
+  color: #a0a0a0;
+}
+
+.copyright a:hover, .copyright a:focus {
+  text-decoration: underline;
 }
 
 /*

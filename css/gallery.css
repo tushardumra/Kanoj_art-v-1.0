@@ -190,6 +190,8 @@ header nav ul li a:hover {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  border-radius: var(--border-radius);
+  box-shadow: 3px 3px 5px 5px var(--shadow-color);
 }
 
 /*
@@ -332,6 +334,15 @@ ul {
   text-align: center;
   height: 50px;
   line-height: 50px;
+}
+
+.copyright a {
+  text-decoration: none;
+  color: #a0a0a0;
+}
+
+.copyright a:hover, .copyright a:focus {
+  text-decoration: underline;
 }
 
 /*

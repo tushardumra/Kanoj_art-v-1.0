@@ -506,6 +506,15 @@ ul {
   line-height: 50px;
 }
 
+.copyright a {
+  text-decoration: none;
+  color: #a0a0a0;
+}
+
+.copyright a:hover, .copyright a:focus {
+  text-decoration: underline;
+}
+
 /*
   ========================================
   RESPONSIVE STYLES - MEDIA QUERIES

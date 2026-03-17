@@ -144,7 +144,7 @@ header nav ul li a:hover {
 
 .menu-toggle i {
   color: var(--text-light-color);
-  font-size: calc(var(--font-size-base) * 1.8);
+  font-size: calc(var(--font-size-base) * 1.6);
 }
 
 #closeBtn {
@@ -185,7 +185,8 @@ header nav ul li a:hover {
 }
 
 .about-text p {
-  word-break: break-all;
+  /* word-break: break-all; */
+  letter-spacing: 0.3px;
   font-size: var(--font-family-base);
 }
 
@@ -211,7 +212,8 @@ header nav ul li a:hover {
   width: 100%;
   object-fit: cover;
   border-radius: 0 35px 0 35px;
-  border: 2px dashed black;
+  border: 1.5px solid rgba(0, 0, 0, 0.201);
+  box-shadow: 3px 3px 10px 10px #777;
 }
 
 /*
@@ -356,6 +358,15 @@ ul {
   line-height: 50px;
 }
 
+.copyright a {
+  text-decoration: none;
+  color: #a0a0a0;
+}
+
+.copyright a:hover, .copyright a:focus {
+  text-decoration: underline;
+}
+
 /*
   ========================================
   RESPONSIVE STYLES - MEDIA QUERIES
@@ -382,13 +393,14 @@ ul {
 
   /* header {
     position: relative;
-  } */
+  } */  
   nav .menu {
     flex-direction: column;
     position: absolute;
-    top: 71px;
+    top: 69px;
     left: 0px;
     background-color: var(--surface-color);
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.588);
     width: 25%;
     padding: 25px 0;
     text-align: center;
@@ -396,8 +408,8 @@ ul {
   }
 
   nav .menu li a {
-    font-size: calc(var(--font-size-base) * 1.4);
-    padding: var(--spacing-unit) 0;
+    font-size: calc(var(--font-size-base) * 1);
+    padding: var(--spacing-unit);
   }
 
   header nav ul li a:hover,
@@ -420,7 +432,8 @@ ul {
   }
 
   #about .container h2 {
-    margin-bottom: calc(var(--spacing-unit) * 2);
+    text-align: center;
+    margin-bottom: calc(var(--spacing-unit) * 4);
   }
 
   .about-content {
@@ -434,20 +447,21 @@ ul {
     order: 2;
     width: 100%;
     padding: 0;
+    word-break: break-all;
   }
 
   .about-image {
     order: 1;
     width: 100%;
-    margin-bottom: calc(var(--spacing-unit) * 2);
+    margin-bottom: calc(var(--spacing-unit) * 4);
   }
 
   .image-grid img {
-    height: 400px;
+    height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 0 35px 0 35px;
-    border: 2px dashed black;
+    border: 1.5px solid rgba(0, 0, 0, 0.201);
+    box-shadow: 2px 2px 8px 8px #777;
   }
 }
 
@@ -485,18 +499,18 @@ ul {
   nav .menu {
     flex-direction: column;
     position: absolute;
-    top: 70px;
+    top: 69px;
     left: 0px;
     background-color: var(--surface-color);
-    width: 50%;
+    width: 35%;
     padding: 25px 0;
     text-align: center;
     transition: all 0.5s ease-in-out;
   }
 
   nav .menu li a {
-    font-size: calc(var(--font-size-base) * 1.1);
-    padding: var(--spacing-unit) 0;
+    font-size: calc(var(--font-size-base) * 0.9);
+    padding: var(--spacing-unit);
   }
 }
 
@@ -536,8 +550,8 @@ ul {
     height: 350px;
     width: 100%;
     object-fit: cover;
-    border-radius: 0 35px 0 35px;
-    border: 2px dashed black;
+    border: 1.5px solid rgba(0, 0, 0, 0.201);
+    box-shadow: 1px 1px 5px 5px #777;
   }
 }
 
