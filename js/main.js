@@ -1,3 +1,5 @@
+// -----------For Toggling Navbar Functionality-----
+
 const menuBtn = document.getElementById("menuBtn");
 const closeBtn = document.getElementById("closeBtn");
 const menu = document.getElementById("menu_list");
@@ -15,6 +17,7 @@ function closeMenu() {
 }
 
 // ------- For Slides Functionality ---------
+/*
 const slider = document.querySelector(".slider");
 const slides = document.querySelector(".slides");
 const images = document.querySelectorAll(".slides img");
@@ -60,12 +63,14 @@ slider.addEventListener("mouseout", () => {
   autoSlide = setInterval(nextSlide, 3000);
 });
 
+*/
+
 /**
  * =======================================
  * INITIALIZATION
  * =======================================
  * This code runs after the entire page structure (DOM) is loaded.
- */
+ */ 
 
 // Selecting Contact Form and Form Status
 const contactForm = document.querySelector("#contact-form");
@@ -79,6 +84,33 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.addEventListener('submit', (event) => {
       // 1. Prevent the default form submission behavior (the page redirect).
       event.preventDefault();
+
+      //Add Regex (Email + Phone)
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      // Indian + general phone validation (10 digits, optional +91)
+      const phoneRegex = /^(\+91[\-\s]?)?[6-9]\d{9}$/;
+
+      // Get input values
+      const email = contactForm.querySelector("#email").value.trim();
+      const phone = contactForm.querySelector("#phone").value.trim();
+
+      // Validate BEFORE sending request
+      // Email Validation
+      if (!emailRegex.test(email)) {
+        formStatus.innerHTML = "Please enter a valid email address.";
+        formStatus.className = "error";
+        formStatus.style.display = "block";
+        return; //STOP form submission
+      }
+
+      // Phone Validation
+      if (!phoneRegex.test(phone)) {
+        formStatus.innerHTML = "Please enter a valid phone number.";
+        formStatus.className = "error";
+        formStatus.style.display = "block";
+        return; //STOP form submission
+      }
 
       // 2. Collect the form data using the FormData API.
       const formData = new FormData(contactForm);

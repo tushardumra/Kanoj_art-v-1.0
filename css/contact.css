@@ -237,7 +237,7 @@ iframe {
 
 #contact input[type="text"],
 #contact input[type="email"],
-#contact input[type="number"],
+#contact input[type="tel"],
 #contact select,
 #contact textarea {
   width: 100%;
@@ -265,7 +265,7 @@ iframe {
 
 #contact input[type="text"]:focus,
 #contact input[type="email"]:focus,
-#contact input[type="number"]:focus,
+#contact input[type="tel"]:focus,
 #contact select:focus,
 #contact textarea:focus {
   outline: none;
