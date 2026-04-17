@@ -367,7 +367,7 @@ ul {
 }
 
 .copyright a:hover, .copyright a:focus {
-  text-decoration: underline;
+  color: #5684c1;
 }
 
 /*
