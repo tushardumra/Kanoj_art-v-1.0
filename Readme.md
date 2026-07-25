@@ -1,7 +1,7 @@
 🎨 Kanoj Art – Digital Art Showcase Website
 🌐 Live Demo
 
-👉 https://kanoj-art-v-1-0.vercel.app/
+👉 https://kanojart.vercel.app/
 
 📌 Overview
 
