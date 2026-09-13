@@ -38,6 +38,7 @@ Simply open index.html in your browser.
 Tushar Dumra
 📩 tushardumra07@gmail.com
 🔗 GitHub: https://github.com/tushardumra
+📷 Instagram: https://www.instagram.com/my.code_journey/?hl=en
 
 ⭐ Show Your Support
 
